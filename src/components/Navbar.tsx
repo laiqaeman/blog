@@ -117,7 +117,7 @@ const Navbar = () => {
         {isMobileMenuOpen ? (
           <FiX size={24} className="text-white" />
         ) : (
-          <FiMenu size={24} className="text-white" />
+          <FiMenu size={38} className="text-white" />
         )}
       </div>
 
