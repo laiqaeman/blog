@@ -3,7 +3,7 @@ import Link from 'next/link';
 import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 
-import { FiMenu, FiX } from 'react-icons/fi'; // Added FiX import for close icon
+import { FiMenu, FiX, FiMoon, FiSun } from 'react-icons/fi'; // Importing the icons for Moon and Sun
 
 // Dark Mode Toggle Component
 const DarkModeToggle = () => {
@@ -34,11 +34,15 @@ const DarkModeToggle = () => {
 
   return (
     <button
-    onClick={handleToggle}
-    className="bg-gray-300 dark:bg-gray-600 text-black dark:text-white p-1 rounded-none border-2 border-white shadow-lg backdrop-blur-sm text-xs sm:text-sm"
-  >
-    {darkMode ? 'Light Mode' : 'Dark Mode'}
-  </button>
+      onClick={handleToggle}
+      className="bg-gray-300 dark:bg-gray-600 text-black dark:text-white p-1 rounded-none border-2 border-white shadow-lg backdrop-blur-sm text-xs sm:text-sm"
+    >
+      {darkMode ? (
+        <FiSun size={20} /> // Show Sun icon for Light Mode
+      ) : (
+        <FiMoon size={20} /> // Show Moon icon for Dark Mode
+      )}
+    </button>
   );
 };
 
@@ -64,7 +68,8 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className="-mt-8 flex items-center justify-between px-4 sm:px-8 md:px-24 py-4 bg-transparent fixed top-0 w-full z-20">
+    <div className="-mt-10 flex items-center justify-between px-4 sm:px-8 md:px-9 py-0 bg-gray-800 fixed top-6 w-full z-20">
+      {/* Navbar content */}
       {/* Logo Section */}
       <div className="flex items-center">
         <Link href="/">
@@ -115,7 +120,7 @@ const Navbar = () => {
       {/* Mobile Menu Icon */}
       <div className="md:hidden cursor-pointer text-white" onClick={toggleMobileMenu}>
         {isMobileMenuOpen ? (
-          <FiX size={24} className="text-white" />
+          <FiX size={40} className="text-white" />
         ) : (
           <FiMenu size={38} className="text-white" />
         )}
@@ -151,13 +156,13 @@ const Navbar = () => {
               <span className="relative">Contact</span>
             </Link>
           </li>
+
+          {/* Dark Mode Toggle (Mobile) */}
+          <div className="p-4">
+            <DarkModeToggle />
+          </div>
         </ul>
       )}
-
-      {/* Dark Mode Toggle (Mobile) */}
-      <div className="fixed top-2 right-1 md:hidden z-50">
-        <DarkModeToggle />
-      </div>
     </div>
   );
 };
