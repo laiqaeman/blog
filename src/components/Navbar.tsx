@@ -130,7 +130,7 @@ const Navbar = () => {
       {isMobileMenuOpen && (
         <ul
           ref={mobileMenuRef}
-          className="absolute top-0 right-0 w-48 bg-black shadow-lg text-white md:hidden z-30 flex flex-col"
+          className="absolute top-7 right-0 w-48 bg-black shadow-lg text-white md:hidden z-30 flex flex-col"
         >
           <li className="group p-4 hover:bg-gray-600" onClick={() => setIsMobileMenuOpen(false)}>
             <Link href="/" className="relative inline-block py-2 px-4">
@@ -158,7 +158,7 @@ const Navbar = () => {
           </li>
 
           {/* Dark Mode Toggle (Mobile) */}
-          <div className="p-4">
+          <div className="p-4 ">
             <DarkModeToggle />
           </div>
         </ul>
