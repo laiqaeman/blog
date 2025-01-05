@@ -40,7 +40,7 @@ const Contact = () => {
   };
 
   return (
-    <div id="contact" className="relative pt-0 w-full">
+    <div id="contact" className="relative pt-0 w-full mb-12">
       {/* Background Image Section */}
       <div
         className="relative w-full h-[50vh] bg-cover bg-center"
@@ -63,7 +63,7 @@ const Contact = () => {
           <div className="flex gap-6 items-center text-sm sm:text-base">
             <a href="mailto:laiqaeman1011@gmail.com" className="flex items-center gap-6 hover:text-yellow-500">
               <IoIosMail size={30} />
-              <span>laiqaeman1011@gmail.com</span>
+              <span className=" hover:text-yellow-500">laiqaeman1011@gmail.com</span>
             </a>
           </div>
           <div className="flex gap-4 items-center text-sm sm:text-base">
@@ -74,7 +74,7 @@ const Contact = () => {
               className="flex items-center gap-6 hover:text-yellow-500"
             >
               <FaInstagramSquare size={30} />
-              <span>Instagram</span>
+              <span className=" hover:text-yellow-500">Instagram</span>
             </a>
           </div>
           <div className="flex gap-4 items-center text-sm sm:text-base">
@@ -85,7 +85,7 @@ const Contact = () => {
               className="flex items-center gap-6 hover:text-yellow-500"
             >
               <FaLinkedin size={30} />
-              <span>LinkedIn</span>
+              <span className=" hover:text-yellow-500">LinkedIn</span>
             </a>
           </div>
           <div className="flex gap-4 items-center text-sm sm:text-base">
@@ -96,7 +96,7 @@ const Contact = () => {
               className="flex items-center gap-6 hover:text-yellow-500"
             >
               <FaFacebook size={30} />
-              <span>Facebook</span>
+              <span className=" hover:text-yellow-500">Facebook</span>
             </a>
           </div>
           <div className="flex gap-6 items-center text-sm sm:text-base">
@@ -117,7 +117,7 @@ const Contact = () => {
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                className="bg-transparent border border-gray-400 shadow-lg rounded-md p-4 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-yellow-400 transition-all"
+                className="bg-transparent border border-gray-400 shadow-lg shadow-yellow-500 rounded-md p-4 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-yellow-400 transition-all"
                 id="name"
               />
             </div>
@@ -130,7 +130,7 @@ const Contact = () => {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                className="bg-transparent border border-gray-400 shadow-lg rounded-md p-4 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-yellow-400 transition-all"
+                className="bg-transparent border border-gray-400 shadow-lg shadow-yellow-500 rounded-md p-4 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-yellow-400 transition-all"
                 id="email"
               />
             </div>
@@ -142,7 +142,7 @@ const Contact = () => {
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
-                className="bg-transparent border border-gray-400 shadow-lg rounded-md p-4 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-yellow-400 transition-all"
+                className="bg-transparent border border-gray-400 shadow-lg shadow-yellow-500 p-4 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-yellow-400 transition-all"
                 id="message"
                 rows={6}
               ></textarea>

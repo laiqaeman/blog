@@ -1,38 +1,36 @@
 import React from 'react';
-import Image from 'next/image';
 
 const Hero = () => {
   return (
     <div
       id="hero"
-      className="relative min-h-screen flex flex-col bg-cover bg-center pt-24"
-      style={{ backgroundImage: 'url("/pic.jpg")' }}
+      className="relative flex flex-col justify-center bg-cover bg-center min-h-screen"
+      style={{ backgroundImage: 'url("/pic.jpg")', paddingTop: '4rem' }} // Adjust padding as per navbar height
     >
-      {/* Heading Section */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center text-white z-10 mt-48 px-4">
-      <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-center leading-snug">
-  <span className="text-3xl sm:text-4xl md:text-5xl">Explore The World with</span> <br />
-  <span className="text-xl sm:text-2xl md:text-4xl">Laiqa&#44;s Travel</span>
+      {/* Hero Content */}
+      <div className="flex flex-col items-center text-white text-center px-4">
+        {/* Heading */}
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-snug">
+          <span className="text-3xl sm:text-4xl md:text-5xl">Explore The World with</span> <br />
+          <span className="text-xl sm:text-2xl md:text-4xl">Laiqa&#44;s Travel</span>
+        </h1>
 
-</h1>
+        {/* Description */}
+        <p className="mt-6 text-lg sm:text-xl text-gray-200">
+          Discover stunning destinations&#44; travel tips&#44; <br /> and inspiration for your next adventure.
+        </p>
 
-
-        {/* Description Paragraph */}
-        <p className="mt-6 text-lg sm:text-1xl text-gray-200 text-center">
-  Discover stunning destinations&#44; travel tips&#44; <br /> and inspiration for your next adventure.
-</p>
-
-
-        {/* Button Section */}
-        <div className="mt-4 flex justify-center">
-  <button className="border-2 border-blue-900 hover:border-blue-950 text-white p-2 sm:p-3 rounded-lg shadow-lg shadow-black/50 text-2xl sm:text-base font-semibold tracking-wide uppercase bg-transparent backdrop-blur-lg flex flex-col items-center">
-    Start Your Adventure
-    <p className="text-gray-500 lowercase flex items-center justify-center mt-1 sm:mt-0.5">
-      Read Blog <span className="font-bold text-xl sm:text-2xl ml-1">&rarr;</span>
-    </p>
-  </button>
-</div>
-
+        {/* Button with Anchor Link */}
+        <div className="mt-8">
+          <a href="/blog">
+            <button className="border-2 border-blue-400 hover:border-yellow-500 text-white hover:text-yellow-500 px-4 py-2 sm:px-6 sm:py-3 rounded-lg shadow-md shadow-yellow-500 text-lg sm:text-xl font-semibold uppercase bg-transparent backdrop-blur-lg">
+              Start Your Adventure
+              <p className="text-gray-500 hover:text-yellow-200 lowercase flex items-center justify-center mt-1">
+                Read Blog <span className="font-bold text-xl sm:text-2xl ml-1">&rarr;</span>
+              </p>
+            </button>
+          </a>
+        </div>
       </div>
     </div>
   );
