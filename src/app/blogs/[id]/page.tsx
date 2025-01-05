@@ -203,9 +203,9 @@ export default function BlogDetail() {
   const { name, image, introduction, attractions, activities, flightFee, tips } = country;
 
   return (
-    <div className="pt-24 px-4 md:px-20">
+    <div className="pt-52 px-9 md:px-20 ">
       {/* Title */}
-      <h1 className="text-6xl font-extrabold text-center mb-12">{name}</h1>
+      <h1 className="text-6xl font-extrabold text-center mb-20">{name}</h1>
 
       {/* Country Image */}
       <div className="flex justify-center mb-12">
@@ -214,13 +214,13 @@ export default function BlogDetail() {
     alt={name}
     width={800} // Adjust the width as needed
     height={400} // Adjust the height as needed
-    className="object-cover rounded-lg shadow-lg"
+    className="object-cover rounded-lg shadow-2xl shadow-gray-500 transition-transform duration-300 hover:scale-105"
   />
 </div>
 
       {/* Country Details */}
       <div className="max-w-4xl mx-auto text-lg leading-relaxed">
-        <div className="mb-8">
+        <div className="mb-9">
           <h2 className="text-2xl font-semibold mb-4">About {name}:</h2>
           <p>{introduction}</p>
         </div>
